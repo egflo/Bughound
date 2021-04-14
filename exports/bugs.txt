@@ -1,0 +1,25 @@
+Created: 3/21/2019 19:9:18
+Field                  Type                   Null                   Key                    Default                Extra                  
+-------------------------------------------------------------------------------------------------------------------------------- 
+problem_report_num     int(11)                NO                     PRI                                           auto_increment         
+program                int(11)                NO                                                                                          
+report_type            int(11)                NO                                                                                          
+severity               int(11)                NO                                                                                          
+problem_summary        varchar(100)           NO                                                                                          
+reproduceable          tinyint(1)             NO                                                                                          
+problem                text                   NO                                                                                          
+suggested_fix          text                   NO                                                                                          
+reported_by            int(11)                NO                                                                                          
+report_date            date                   NO                                                                                          
+area                   int(11)                NO                                                                                          
+assigned_to            int(11)                NO                                                                                          
+comments               varchar(100)           NO                                                                                          
+status                 varchar(20)            NO                                                                                          
+priority               int(11)                NO                                                                                          
+resolution             int(11)                NO                                                                                          
+resolution_version     float                  NO                                                                                          
+resolved_by            int(11)                NO                                                                                          
+resolved_date          date                   NO                                                                                          
+tested_by              int(11)                NO                                                                                          
+tested_date            date                   NO                                                                                          
+deferred               tinyint(1)             NO                                                                                          

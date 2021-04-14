@@ -1,0 +1,22 @@
+problem_report_num: 5  
+Program: COBOL Coder (2,1) 
+Report Type: Coding Error  
+severity: Serious  
+problem_summary: IDE Help->Editor goes to empty page  
+reproduceable: Yes  
+problem: IDE Help->Editor goes to empty page  
+suggested_fix:   
+reported_by: Sue  
+report_date: 2019-03-18  
+area: Lexer  
+assigned_to:   
+comments:   
+status: Open  
+priority:   
+resolution:   
+resolution_version: 0  
+resolved_by: Sue  
+resolved_date: 0000-00-00  
+tested_by:   
+tested_date: 0000-00-00  
+deferred: No  

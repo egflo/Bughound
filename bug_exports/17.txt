@@ -1,0 +1,22 @@
+problem_report_num: 17  
+Program: 1  
+Report Type: 1  
+severity: 1  
+problem_summary: D  
+reproduceable: 0  
+problem: D  
+suggested_fix: D  
+reported_by: 1  
+report_date: 2019-03-14  
+area: 0  
+assigned_to: 0  
+comments:   
+status: 1  
+priority: 0  
+resolution: 0  
+resolution_version: 0  
+resolved_by: 0  
+resolved_date: 0000-00-00  
+tested_by: 0  
+tested_date: 0000-00-00  
+deferred: 0  

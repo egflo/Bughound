@@ -1,0 +1,22 @@
+problem_report_num: 6  
+Program: 2  
+Report Type: 1  
+severity: 2  
+problem_summary: “add areas page” has no means to Cancel or quit after adding  
+reproduceable: 0  
+problem: â€œadd areas pageâ€ has no means to Cancel or quit after adding  
+suggested_fix:   
+reported_by: 4  
+report_date: 2019-03-18  
+area: 0  
+assigned_to: 0  
+comments:   
+status: 1  
+priority: 0  
+resolution: 0  
+resolution_version: 0  
+resolved_by: 0  
+resolved_date: 0000-00-00  
+tested_by: 0  
+tested_date: 0000-00-00  
+deferred: 0  

@@ -1,0 +1,22 @@
+problem_report_num: 4  
+Program: Pascal Coder (1,1) 
+Report Type: Suggestion  
+severity: Minor  
+problem_summary: IDE should have a toolbar for compiling, linking, running  
+reproduceable: Yes  
+problem: IDE should have a toolbar for compiling, linking, running  
+suggested_fix:   
+reported_by: Yoshi  
+report_date: 2019-03-18  
+area: Lexer  
+assigned_to:   
+comments:   
+status: Open  
+priority:   
+resolution:   
+resolution_version: 0  
+resolved_by: Yoshi  
+resolved_date: 0000-00-00  
+tested_by:   
+tested_date: 0000-00-00  
+deferred: No  

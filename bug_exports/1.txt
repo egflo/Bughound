@@ -1,0 +1,22 @@
+problem_report_num: 1  
+Program: COBOL Coder (1,1) 
+Report Type: Documentation  
+severity: Fatal  
+problem_summary: All COBOL programmers are old  
+reproduceable: Yes  
+problem: All our COBOL programmers are old and dying out so fast we can’t find replacements  
+suggested_fix: Hire young COBOL programmers  
+reported_by: Sue  
+report_date: 2019-03-18  
+area: Lexer  
+assigned_to: Francois  
+comments:   
+status: Open  
+priority: As soon as possible  
+resolution: fixed  
+resolution_version: 0  
+resolved_by: Sue  
+resolved_date: 0000-00-00  
+tested_by:   
+tested_date: 0000-00-00  
+deferred: No  

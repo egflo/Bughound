@@ -1,0 +1,22 @@
+problem_report_num: 7  
+Program: Bughound (1,1) 
+Report Type: Coding Error  
+severity: Fatal  
+problem_summary: Bug Report Test  
+reproduceable: No  
+problem: This is a Test to edit Bug Details  
+suggested_fix:   
+reported_by: Habib  
+report_date: 2019-03-20  
+area: Logon  
+assigned_to:   
+comments:   
+status: Closed  
+priority: Immediately  
+resolution: Pending  
+resolution_version: 0  
+resolved_by: Habib  
+resolved_date: 0000-00-00  
+tested_by:   
+tested_date: 0000-00-00  
+deferred: No  

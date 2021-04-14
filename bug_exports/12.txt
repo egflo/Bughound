@@ -1,0 +1,22 @@
+problem_report_num: 12  
+Program: 4  
+Report Type: 1  
+severity: 1  
+problem_summary: Python  
+reproduceable: 0  
+problem: Testing Python  
+suggested_fix: Just Test   
+reported_by: 1  
+report_date: 0000-00-00  
+area: 0  
+assigned_to: 0  
+comments: Ok  
+status: 1  
+priority: 3  
+resolution: 3  
+resolution_version: 0.03  
+resolved_by: 5  
+resolved_date: 0000-00-00  
+tested_by: 5  
+tested_date: 0000-00-00  
+deferred: 0  

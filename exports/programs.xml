@@ -1,0 +1,16 @@
+<!-- Created: 3/21/2019 19:7:31-->
+<?xml version="1.0" encoding="utf-8"?>
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+<pma:structure_schemas>
+<pma:database name="bug_hound" collation="latin1_swedish_ci" charset="latin1">
+<pma:table name="bugs">
+CREATE TABLE `programs` (
+ 'ProgID' int(10) unsigned NOT NULL auto_increment,
+ 'ProgName' varchar(100) NOT NULL ,
+ 'Release_build' varchar(32) NOT NULL ,
+ 'Version' varchar(32) NOT NULL ,
+PRIMARY KEY (`ProgID`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
+</pma:table>
+</pma:database>
+</pma:structure_schemas>

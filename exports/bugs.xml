@@ -1,0 +1,34 @@
+<!-- Created: 3/21/2019 19:9:4-->
+<?xml version="1.0" encoding="utf-8"?>
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+<pma:structure_schemas>
+<pma:database name="bug_hound" collation="latin1_swedish_ci" charset="latin1">
+<pma:table name="bugs">
+CREATE TABLE `bugs` (
+ 'problem_report_num' int(11) NOT NULL auto_increment,
+ 'program' int(11) NOT NULL ,
+ 'report_type' int(11) NOT NULL ,
+ 'severity' int(11) NOT NULL ,
+ 'problem_summary' varchar(100) NOT NULL ,
+ 'reproduceable' tinyint(1) NOT NULL ,
+ 'problem' text NOT NULL ,
+ 'suggested_fix' text NOT NULL ,
+ 'reported_by' int(11) NOT NULL ,
+ 'report_date' date NOT NULL ,
+ 'area' int(11) NOT NULL ,
+ 'assigned_to' int(11) NOT NULL ,
+ 'comments' varchar(100) NOT NULL ,
+ 'status' varchar(20) NOT NULL ,
+ 'priority' int(11) NOT NULL ,
+ 'resolution' int(11) NOT NULL ,
+ 'resolution_version' float NOT NULL ,
+ 'resolved_by' int(11) NOT NULL ,
+ 'resolved_date' date NOT NULL ,
+ 'tested_by' int(11) NOT NULL ,
+ 'tested_date' date NOT NULL ,
+ 'deferred' tinyint(1) NOT NULL ,
+PRIMARY KEY (`problem_report_num`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+</pma:table>
+</pma:database>
+</pma:structure_schemas>

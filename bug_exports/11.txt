@@ -1,0 +1,22 @@
+problem_report_num: 11  
+Program: 1  
+Report Type: 4  
+severity: 2  
+problem_summary: Code  
+reproduceable: 0  
+problem: Code is broken  
+suggested_fix: None  
+reported_by: 1  
+report_date: 0000-00-00  
+area: 0  
+assigned_to: 0  
+comments: None  
+status: 3  
+priority: 2  
+resolution: 2  
+resolution_version: 0  
+resolved_by: 0  
+resolved_date: 0000-00-00  
+tested_by: 0  
+tested_date: 0000-00-00  
+deferred: 0  

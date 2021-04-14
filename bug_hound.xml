@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 4.8.4
+- https://www.phpmyadmin.net
+-
+- Host: localhost
+- Generation Time: Mar 13, 2019 at 01:51 PM
+- Server version: 10.1.37-MariaDB
+- PHP Version: 7.3.1
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="bug_hound" collation="latin1_swedish_ci" charset="latin1">
+            <pma:table name="attachments">
+                CREATE TABLE `attachments` (
+                  `type` varchar(32) NOT NULL,
+                  `location` varchar(100) NOT NULL,
+                  `problem_report_id` int(11) NOT NULL,
+                  `attachment_report_id` int(11) NOT NULL AUTO_INCREMENT,
+                  PRIMARY KEY (`attachment_report_id`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="attachment_type">
+                CREATE TABLE `attachment_type` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `type` varchar(100) NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="bugs">
+                CREATE TABLE `bugs` (
+                  `problem_report_num` int(11) NOT NULL AUTO_INCREMENT,
+                  `program` int(11) NOT NULL,
+                  `report_type` int(11) NOT NULL,
+                  `severity` int(11) NOT NULL,
+                  `problem_summary` varchar(100) NOT NULL,
+                  `reproduceable` tinyint(1) NOT NULL,
+                  `problem` text NOT NULL,
+                  `suggested_fix` text NOT NULL,
+                  `reported_by` int(11) NOT NULL,
+                  `report_date` date NOT NULL,
+                  `area` int(11) NOT NULL,
+                  `assigned_to` int(11) NOT NULL,
+                  `comments` varchar(100) NOT NULL,
+                  `status` varchar(20) NOT NULL,
+                  `priority` int(11) NOT NULL,
+                  `resolution` int(11) NOT NULL,
+                  `resolution_version` float NOT NULL,
+                  `resolved_by` int(11) NOT NULL,
+                  `resolved_date` date NOT NULL,
+                  `tested_by` int(11) NOT NULL,
+                  `tested_date` date NOT NULL,
+                  `deferred` tinyint(1) NOT NULL,
+                  PRIMARY KEY (`problem_report_num`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="employee">
+                CREATE TABLE `employee` (
+                  `EmpID` int(11) NOT NULL AUTO_INCREMENT,
+                  `Name` varchar(100) NOT NULL,
+                  `UName` varchar(100) NOT NULL,
+                  `Password` varchar(100) NOT NULL,
+                  `UserLevel` int(11) NOT NULL,
+                  PRIMARY KEY (`EmpID`),
+                  UNIQUE KEY `UNQ` (`EmpID`),
+                  UNIQUE KEY `UName` (`UName`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="functional_area">
+                CREATE TABLE `functional_area` (
+                  `name` varchar(100) NOT NULL,
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="priority">
+                CREATE TABLE `priority` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `description` varchar(100) NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="programs">
+                CREATE TABLE `programs` (
+                  `ProgID` int(10) unsigned NOT NULL AUTO_INCREMENT,
+                  `ProgName` varchar(100) NOT NULL,
+                  UNIQUE KEY `UNQ` (`ProgID`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="reports">
+                CREATE TABLE `reports` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `type` varchar(100) NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="resolution">
+                CREATE TABLE `resolution` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `type` varchar(100) NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="severity">
+                CREATE TABLE `severity` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `description` varchar(100) NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="status">
+                CREATE TABLE `status` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `description` varchar(100) NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="userlevel">
+                CREATE TABLE `userlevel` (
+                  `ULevel` int(11) NOT NULL AUTO_INCREMENT,
+                  `UGroup` varchar(100) NOT NULL,
+                  PRIMARY KEY (`ULevel`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'bug_hound'
+    -->
+    <database name="bug_hound">
+        <!-- Table attachments -->
+        <!-- Table attachment_type -->
+        <table name="attachment_type">
+            <column name="id">1</column>
+            <column name="type">Printouts</column>
+        </table>
+        <table name="attachment_type">
+            <column name="id">2</column>
+            <column name="type">Memory Dumps</column>
+        </table>
+        <table name="attachment_type">
+            <column name="id">3</column>
+            <column name="type">Images</column>
+        </table>
+        <table name="attachment_type">
+            <column name="id">4</column>
+            <column name="type">Memos</column>
+        </table>
+        <table name="attachment_type">
+            <column name="id">5</column>
+            <column name="type">Text Files</column>
+        </table>
+        <!-- Table bugs -->
+        <table name="bugs">
+            <column name="problem_report_num">11</column>
+            <column name="program">1</column>
+            <column name="report_type">1</column>
+            <column name="severity">1</column>
+            <column name="problem_summary">Code break</column>
+            <column name="reproduceable">0</column>
+            <column name="problem">Code is broken</column>
+            <column name="suggested_fix">None</column>
+            <column name="reported_by">1</column>
+            <column name="report_date">2019-03-13</column>
+            <column name="area">3</column>
+            <column name="assigned_to">3</column>
+            <column name="comments">None</column>
+            <column name="status">1</column>
+            <column name="priority">2</column>
+            <column name="resolution">0</column>
+            <column name="resolution_version">0</column>
+            <column name="resolved_by">0</column>
+            <column name="resolved_date">0000-00-00</column>
+            <column name="tested_by">0</column>
+            <column name="tested_date">0000-00-00</column>
+            <column name="deferred">0</column>
+        </table>
+        <!-- Table employee -->
+        <table name="employee">
+            <column name="EmpID">1</column>
+            <column name="Name">Test</column>
+            <column name="UName">T1</column>
+            <column name="Password">Q</column>
+            <column name="UserLevel">0</column>
+        </table>
+        <table name="employee">
+            <column name="EmpID">2</column>
+            <column name="Name">Test2</column>
+            <column name="UName">T21</column>
+            <column name="Password">Q</column>
+            <column name="UserLevel">0</column>
+        </table>
+        <table name="employee">
+            <column name="EmpID">3</column>
+            <column name="Name">Test3</column>
+            <column name="UName">T3</column>
+            <column name="Password">Q</column>
+            <column name="UserLevel">2</column>
+        </table>
+        <table name="employee">
+            <column name="EmpID">4</column>
+            <column name="Name">Test4</column>
+            <column name="UName">T4</column>
+            <column name="Password">q</column>
+            <column name="UserLevel">2</column>
+        </table>
+        <table name="employee">
+            <column name="EmpID">5</column>
+            <column name="Name">vinuth</column>
+            <column name="UName">vin</column>
+            <column name="Password">Q</column>
+            <column name="UserLevel">2</column>
+        </table>
+        <table name="employee">
+            <column name="EmpID">6</column>
+            <column name="Name">Mike</column>
+            <column name="UName">mh</column>
+            <column name="Password">Q</column>
+            <column name="UserLevel">0</column>
+        </table>
+        <table name="employee">
+            <column name="EmpID">7</column>
+            <column name="Name">Vic</column>
+            <column name="UName">V</column>
+            <column name="Password">Q</column>
+            <column name="UserLevel">3</column>
+        </table>
+        <table name="employee">
+            <column name="EmpID">10</column>
+            <column name="Name">Test1</column>
+            <column name="UName">T11</column>
+            <column name="Password">Q</column>
+            <column name="UserLevel">1</column>
+        </table>
+        <table name="employee">
+            <column name="EmpID">11</column>
+            <column name="Name">John</column>
+            <column name="UName">Smith</column>
+            <column name="Password">Q</column>
+            <column name="UserLevel">3</column>
+        </table>
+        <!-- Table functional_area -->
+        <table name="functional_area">
+            <column name="name">Area 1</column>
+            <column name="id">1</column>
+        </table>
+        <table name="functional_area">
+            <column name="name">Area 2</column>
+            <column name="id">2</column>
+        </table>
+        <table name="functional_area">
+            <column name="name">Area 3</column>
+            <column name="id">3</column>
+        </table>
+        <table name="functional_area">
+            <column name="name">Area 4</column>
+            <column name="id">4</column>
+        </table>
+        <table name="functional_area">
+            <column name="name">Area 5</column>
+            <column name="id">5</column>
+        </table>
+        <!-- Table priority -->
+        <table name="priority">
+            <column name="id">1</column>
+            <column name="description">Immediately</column>
+        </table>
+        <table name="priority">
+            <column name="id">2</column>
+            <column name="description">As soon as possible</column>
+        </table>
+        <table name="priority">
+            <column name="id">3</column>
+            <column name="description">Before next milestone</column>
+        </table>
+        <table name="priority">
+            <column name="id">4</column>
+            <column name="description">Before Release</column>
+        </table>
+        <table name="priority">
+            <column name="id">5</column>
+            <column name="description">Fix if possible</column>
+        </table>
+        <table name="priority">
+            <column name="id">6</column>
+            <column name="description">Optional</column>
+        </table>
+        <!-- Table programs -->
+        <table name="programs">
+            <column name="ProgID">1</column>
+            <column name="ProgName">Java</column>
+        </table>
+        <table name="programs">
+            <column name="ProgID">2</column>
+            <column name="ProgName">C++</column>
+        </table>
+        <table name="programs">
+            <column name="ProgID">3</column>
+            <column name="ProgName">C</column>
+        </table>
+        <table name="programs">
+            <column name="ProgID">4</column>
+            <column name="ProgName">Python</column>
+        </table>
+        <table name="programs">
+            <column name="ProgID">5</column>
+            <column name="ProgName">ADA</column>
+        </table>
+        <!-- Table reports -->
+        <table name="reports">
+            <column name="id">1</column>
+            <column name="type">Coding Error</column>
+        </table>
+        <table name="reports">
+            <column name="id">2</column>
+            <column name="type">Design Issue</column>
+        </table>
+        <table name="reports">
+            <column name="id">3</column>
+            <column name="type">Suggestion</column>
+        </table>
+        <table name="reports">
+            <column name="id">4</column>
+            <column name="type">Documentation</column>
+        </table>
+        <table name="reports">
+            <column name="id">5</column>
+            <column name="type">Hardware</column>
+        </table>
+        <table name="reports">
+            <column name="id">6</column>
+            <column name="type">Query</column>
+        </table>
+        <!-- Table resolution -->
+        <table name="resolution">
+            <column name="id">1</column>
+            <column name="type">Pending</column>
+        </table>
+        <table name="resolution">
+            <column name="id">2</column>
+            <column name="type">fixed</column>
+        </table>
+        <table name="resolution">
+            <column name="id">3</column>
+            <column name="type">Irreproducible</column>
+        </table>
+        <table name="resolution">
+            <column name="id">4</column>
+            <column name="type">Deferred</column>
+        </table>
+        <table name="resolution">
+            <column name="id">5</column>
+            <column name="type">As designed</column>
+        </table>
+        <table name="resolution">
+            <column name="id">6</column>
+            <column name="type">Withdrawn by reporter</column>
+        </table>
+        <table name="resolution">
+            <column name="id">7</column>
+            <column name="type">Need more info</column>
+        </table>
+        <table name="resolution">
+            <column name="id">8</column>
+            <column name="type">Disagree with suggestion</column>
+        </table>
+        <table name="resolution">
+            <column name="id">9</column>
+            <column name="type">Duplicate</column>
+        </table>
+        <!-- Table severity -->
+        <table name="severity">
+            <column name="id">1</column>
+            <column name="description">Minor</column>
+        </table>
+        <table name="severity">
+            <column name="id">2</column>
+            <column name="description">Serious</column>
+        </table>
+        <table name="severity">
+            <column name="id">3</column>
+            <column name="description">Fatal</column>
+        </table>
+        <!-- Table status -->
+        <table name="status">
+            <column name="id">1</column>
+            <column name="description">Open</column>
+        </table>
+        <table name="status">
+            <column name="id">2</column>
+            <column name="description">Closed</column>
+        </table>
+        <table name="status">
+            <column name="id">3</column>
+            <column name="description">Resolved</column>
+        </table>
+        <!-- Table userlevel -->
+        <table name="userlevel">
+            <column name="ULevel">0</column>
+            <column name="UGroup">All Groups</column>
+        </table>
+        <table name="userlevel">
+            <column name="ULevel">1</column>
+            <column name="UGroup">Level 1</column>
+        </table>
+        <table name="userlevel">
+            <column name="ULevel">2</column>
+            <column name="UGroup">Level 2</column>
+        </table>
+        <table name="userlevel">
+            <column name="ULevel">3</column>
+            <column name="UGroup">Level 3</column>
+        </table>
+    </database>
+</pma_xml_export>
